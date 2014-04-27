@@ -1,0 +1,322 @@
+
+/*workaround for flickers/flashes of JQM transitions
+may cause crashes and performance issues!*/
+
+/*.ui-page { 
+	-webkit-backface-visibility: hidden; 
+}
+*/
+/*end workaround*/
+
+/* For 100% width */
+
+/*html,body, div[data-role ="page"] {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+ 
+         .ui-content{
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            /*border-style: solid;
+            border-color: chartreuse;
+            border-width: 5px;
+        } 
+        */
+
+body {
+	/*for some reason, there was an 8px margin from somewhere, JQM probably*/
+	margin: 0 !important;
+}
+
+/*Set preview bar height*/
+
+.preview {
+  /*height: 75px;*/
+  /*border-top: 1px solid #BBB;*/
+}
+
+form {
+	margin: 40;
+}
+
+h1 {
+	font-size: 18pt;
+}
+
+p {
+
+}
+
+.login {
+	margin: 0;
+}
+
+.icon {
+	text-align: center;
+}
+
+.iconBar {
+	background: #e9e9e9;
+	padding: 0 10 0 0;
+}
+.ui-footer {
+	overflow: hidden;
+}
+.myFooter {
+/*	width: 100% !important;*/
+	overflow: hidden;
+}
+
+#templateSearch1, #templateSearch2, #gallery {
+	background: #888;
+}
+
+#bundleView, #browse {
+	background: #444;
+}
+
+#photoView {
+	background: black;
+	background-size: cover;
+}
+
+.galleryImg {
+	/*to put border on inside of box*/
+	/*box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;*/
+	
+	border: 2px solid #525252;
+	float: left;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    background-position: center;
+    margin: 1%;
+    cursor: pointer;
+
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: cover;
+    position: relative;
+}
+
+.galleryImg:hover, .untaggedBundle:hover {
+	/*to put border on inside of box*/
+	/*box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;*/
+
+	border: 2px solid orange;
+}
+
+.untaggedBundle {
+	/*to put border on inside of box*/
+	/*box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;*/
+
+	border: 2px solid #FF3399;
+	float: left;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    background-position: center;
+    margin: 1%;
+    cursor: pointer;
+
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: cover;
+    position: relative;
+}
+
+.bundleCount {
+
+	background-color: #666;
+	position: absolute;
+	bottom: 7px;
+	right: 7px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+.bundleCount > p {
+	font-size: 10;
+	margin: 4;
+	color: white;
+}
+
+
+.bundleDiv {
+	float: left;
+    width: 47%;
+    margin: 1%;
+}
+
+.bundleHeader {
+	height: 45px;
+	width: 47%;
+    margin: 1%;
+}
+
+.bundleImg {
+	border: 1px solid #666;
+	/*float: left;*/
+    width: 99%;
+    height: 0;
+    padding-bottom: 99%;
+    background-position: center;
+    cursor: pointer;
+
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: cover;
+}
+
+.bundleImg:hover{
+	border: 1px solid orange;
+}
+
+.bundleViewImg {
+	border: 1px solid #666;
+	float: left;
+    width: 47%;
+    height: 0;
+    padding-bottom: 47%;
+    margin: 1%;
+    background-position: center;
+    cursor: pointer;
+
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: cover;
+}
+
+.bundleViewImg:hover{
+	border: 1px solid orange;
+}
+
+
+.fullViewDiv {
+	text-align: center;
+	margin: auto 0;
+}
+
+.galleryImgFull {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /*overflow: auto;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*border: 1px solid #777;*/
+}
+
+/*.footerButton {
+	position: absolute;
+	bottom: 20px;
+	height: 100%;
+	width: 100%;
+	border: none;
+}*/
+
+/*makes tag categories full width. override jQM.*/
+
+.ui-controlgroup-controls {
+	width: 92% !important;
+	margin: 0px 4% 0px 4%;
+}
+
+.ui-navbar {
+	width: 91% !important;
+}
+
+.ui-btn-inner {
+ /*border: 1px solid #D5D5D5; */
+ border-color: rgba(255,255,255,.3); 
+}
+
+
+.nav-button-r, .nav-button-l {
+	position: absolute;
+	height: 100%;
+	width: 7%;
+	/*background-color: rgb(235, 235, 235);*/
+	z-index: 255;
+}
+
+.nav-button-r {
+	right: 0;
+}
+
+.nav-button-l {
+	left: 0;
+}
+
+.nav-button-l > p, .nav-button-r > p {
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	opacity: .2;
+}
+
+.nav-button-l > p {
+	left: 25%;
+}
+
+.nav-button-r > p {
+	right: 25%;
+}
+
+/*.ui-radio-on {
+	background-color: #999 !important;
+}*/
+
+
+
+.indicator {
+	position: absolute;
+	width: 10px;
+}
+
+.ui-btn-up-c {
+	background-image: none !important;
+}
+
+div.ui-input-text {
+	border: none;
+}
+
+input.ui-input-text {
+	padding: 2 20 !important;
+}
+
+#openCamera {
+	/*padding: 2 20 !important;	*/
+	width: 91%;
+}
+
+h2 {
+	font-size: 8pt;
+	margin: -5 0 5 4%;
+}
+
+#flashNotification {
+ 	position: absolute; 
+	border-style: dotted;
+	border-width: 2px;
+	border-radius: 8px;
+ 	bottom: 15px; 
+ 	margin: 0 auto;
+	}
+
+#flashNotification > p {
+	margin: 10px;
+}
+
